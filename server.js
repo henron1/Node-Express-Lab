@@ -1,11 +1,11 @@
 const express = require('express'); // importing a CommonJS module
 
-// const postsRouter = require('./data/db');
+const postsRouter = require('./router/PostRouter')
 
 const server = express();
 
 server.use(express.json());
-// server.use('/api/posts');
+server.use('/api/posts', postsRouter);
 
 // server.use('/api/posts', postsRouter);
 
